@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
         title: const Text('Home Page'),
       ),
       body: GridView.builder(
-        itemCount: 6,
+        itemCount: taskList.length,
         padding: const EdgeInsets.all(16),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
           crossAxisSpacing: 16,
           childAspectRatio: 1,
         ),
-        itemBuilder: (context, index) => const HomePageCard(),
+        itemBuilder: (context, index) => HomePageCard(index: index),
       ),
     );
   }
